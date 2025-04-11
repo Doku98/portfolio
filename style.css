@@ -50,19 +50,19 @@ form {
   padding: 1em;
 
   display: grid;
-  grid-template-columns: auto 1fr; /* label = auto, input = fill */
-  gap: 1em;                        /* spacing between rows */
+  grid-template-columns: auto 1fr; 
+  gap: 1em;                        
 }
 
-/* Each label becomes a mini grid container using the parent's grid */
+
 form label {
   display: grid;
   grid-template-columns: subgrid;
-  grid-column: 1 / -1;             /* label spans full width of form */
+  grid-column: 1 / -1;            
   font: inherit;
 }
 
-/* Make inputs, textarea, and button fill their grid space */
+
 form input,
 form textarea,
 form button {
@@ -89,4 +89,21 @@ form button {
 
 .projects h2 {
   margin: 0;
+  color: var(--color-accent);
+}
+
+.my_picture {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto; 
+}
+
+.my_name {
+  text-align: center;
+  color: var(--color-accent);
+}
+
+.about_me {
+  text-align: center;
 }
