@@ -1,11 +1,9 @@
 console.log("IT’S ALIVE!");
 
-// Helper function: selects all matching elements (like querySelectorAll but returns an array)
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// List of pages to show in the nav
 let pages = [
   { url: "", title: "Home" },
   { url: "projects/", title: "Projects" },
@@ -13,34 +11,85 @@ let pages = [
   { url: "https://github.com/doku98", title: "GitHub" }
 ];
 
-// Figure out if we’re running locally or on GitHub Pages, and set base path accordingly
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"                // local development
-  : "/github.com/Doku98/portfolio/"; // GitHub Pages — replace this with your actual repo name
+  ? "/"
+  : "/your-repo-name/"; // <- replace this with your actual GitHub repo name
 
-// Create <nav> element and add it to the top of the page
+// === NAVIGATION MENU ===
 let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-// Loop through all the pages and create a link for each one
 for (let p of pages) {
   let url = p.url;
   let title = p.title;
 
-  // If the URL is internal (not starting with http), prefix it with the base path
   url = !url.startsWith("http") ? BASE_PATH + url : url;
 
-  // Create the <a> element
   let a = document.createElement("a");
   a.href = url;
   a.textContent = title;
 
-  // Add "current" class if this link matches the current page
   a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
-
-  // If it's an external link (like GitHub), open it in a new tab
   a.target = a.host !== location.host ? "_blank" : "";
 
-  // Add the link to the nav
   nav.append(a);
 }
+
+// === DARK MODE SWITCHER ===
+document.body.insertAdjacentHTML(
+  "afterbegin",
+  `
+  <label class="color-scheme">
+    Theme:
+    <select>
+      <option value="light dark">Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+  `
+);
+
+let select = document.querySelector(".color-scheme select");
+
+// Handle user changing the theme
+select.addEventListener("input", function (event) {
+  let value = event.target.value;
+  setColorScheme(value);
+  localStorage.colorScheme = value;
+});
+
+// Apply stored theme (if it exists)
+if ("colorScheme" in localStorage) {
+  setColorScheme(localStorage.colorScheme);
+  select.value = localStorage.colorScheme;
+}
+
+// Utility function to set color-scheme on root element
+function setColorScheme(value) {
+  document.documentElement.style.setProperty("color-scheme", value);
+}
+
+
+
+
+//  CONTACT FORM FIX ===
+let form = document.querySelector("form");
+
+form?.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default behavior
+
+  let data = new FormData(form);
+  let params = [];
+
+  for (let [name, value] of data) {
+    // Properly encode values for URL
+    params.push(`${name}=${encodeURIComponent(value)}`);
+  }
+
+  // Build mailto URL
+  let mailto = `${form.action}?${params.join("&")}`;
+
+  // Open email client with pre-filled subject and body
+  location.href = mailto;
+});

@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
-    <h1>Contact</h1>
+  <h1>Contact</h1>
 
-    <form action="mailto:ckumagai@ucsd.edu" method="POST" enctype="text/plain">
-      <label>
-        Your Email:
-        <input type="email" name="email" value="example@email.com">
-      </label>
-      <br><br>
-    
-      <label>
-        Subject:
-        <input name="subject" value="Just saying hi">
-      </label>
-      <br><br>
-    
-      <label>
-        Message:
-        <textarea name="body">This is a default message.</textarea>
-      </label>
-      <br><br>
-    
-      <button>Send</button>
-    </form>
-    <script type="module" src="../global.js"></script>
+  <form action="mailto:ckumagai@ucsd.edu" method="GET">
+    <label>
+      Subject:
+      <input name="subject" value="Just saying hi" required />
+    </label>
+    <br><br>
+
+    <label>
+      Message:
+      <textarea name="body" required>This is a default message.</textarea>
+    </label>
+    <br><br>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <script type="module" src="../global.js"></script>
 </body>
 </html>
