@@ -13,7 +13,7 @@ let pages = [
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"
-  : "/your-repo-name/"; // <- replace this with your actual GitHub repo name
+  : "/doku98/"; 
 
 // === NAVIGATION MENU ===
 let nav = document.createElement("nav");
