@@ -13,7 +13,7 @@ let pages = [
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"
-  : "/doku98/"; 
+  : "/portfolio/"; 
 
 // === NAVIGATION MENU ===
 let nav = document.createElement("nav");
