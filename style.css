@@ -136,3 +136,75 @@ label.color-scheme {
 label.color-scheme select {
   font: inherit;
 }
+
+.year {
+  color: white;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  margin-top: 0.5em;
+}
+
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+  display: block;
+  margin-inline: auto;
+}
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+  display: block;
+  margin-inline: auto;
+}
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  margin-block: 2em;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 2px;
+}
+.searchBar {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em;
+  font-size: 1em;
+  width: 80%;
+  max-width: 400px;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+#projects-plot path.selected {
+  fill: var(--color);
+  cursor: pointer;
+}
+
+#projects-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}

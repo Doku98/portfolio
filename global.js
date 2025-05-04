@@ -121,12 +121,16 @@ export async function fetchJSON(url) {
       article.innerHTML = `
         <${headingLevel}>${project.title}</${headingLevel}>
         <img src="${project.image}" alt="${project.title}">
-        <p>${project.description}</p>
+        <div class="project-text">
+          <p>${project.description}</p>
+          <p class="year">${project.year}</p>
+        </div>
       `;
   
       containerElement.appendChild(article);
     }
   }
+  
 
   export async function fetchGitHubData(username) {
     return fetchJSON(`https://api.github.com/users/${username}`);

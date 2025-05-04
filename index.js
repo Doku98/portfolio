@@ -9,7 +9,7 @@ renderProjects(latestProjects, projectsContainer, 'h2');
 // ✅ Fetch GitHub data
 const githubData = await fetchGitHubData('doku98');
 
-// ✅ Then display it
+// ✅ Then display 
 const profileStats = document.querySelector('#profile-stats');
 
 if (profileStats) {

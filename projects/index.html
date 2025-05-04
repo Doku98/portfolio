@@ -1,85 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1 class="projects-title">Resume</h1>
+  <h1 class="projects-title">Resume</h1>
 
-    
-    <div class="projects">
-        <!--  
-        <article>
-            <h2>Lorem ipsum dolor sit.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minus accusantium doloribus debitis voluptas veniam saepe quia vitae, commodi perferendis id ut cupiditate neque perspiciatis necessitatibus fugiat nemo. Quia, totam.</p>
-        </article>
-        <article>
-            <h2>Ea explicabo expedita excepturi!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Exercitationem nihil nobis explicabo eaque aut earum reprehenderit minus perspiciatis, dolorum eius accusantium quo soluta tempora dignissimos voluptas inventore impedit magni a alias, nostrum quaerat, maxime tempore odio. Perspiciatis, accusamus!</p>
-        </article>
-        <article>
-            <h2>Aspernatur dolore nisi voluptatibus.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Numquam suscipit magnam debitis aut et, distinctio reiciendis excepturi laudantium quibusdam laboriosam perferendis! Ducimus eveniet molestias sint laborum. Expedita repellat cumque similique, iusto soluta unde. Veritatis nesciunt dolores sequi ratione.</p>
-        </article>
-        <article>
-            <h2>Sit corporis quod similique!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Quis ullam adipisci placeat dicta aliquam, obcaecati blanditiis expedita esse dolor molestiae dolorum soluta delectus quos pariatur omnis tempora nesciunt hic corporis sequi atque voluptatum! Enim ipsum debitis magni dolores.</p>
-        </article>
-        <article>
-            <h2>Est quasi quis ipsum?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Delectus, consectetur temporibus? Magni molestias architecto similique atque vitae? Rerum non sequi modi? Nemo mollitia suscipit iste consequatur libero corrupti velit. Minima dolorem magni quibusdam libero nam! Ad, mollitia ducimus!</p>
-        </article>
-        <article>
-            <h2>Odit porro nostrum earum!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>In nisi enim adipisci, magnam praesentium fugiat nesciunt dolor neque ducimus fugit consectetur aliquid omnis aut qui? Ad, labore, sunt incidunt fugiat nulla inventore quibusdam deleniti, quasi delectus quia rem.</p>
-        </article>
-        <article>
-            <h2>Quis repellendus ipsa ab?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Recusandae animi nobis exercitationem explicabo necessitatibus vel adipisci neque magni ducimus, dolorem, molestiae molestias dignissimos esse. Eaque, sapiente atque corrupti vitae, dolor rem incidunt ullam nam unde culpa velit asperiores!</p>
-        </article>
-        <article>
-            <h2>Veritatis molestias animi non?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Qui aperiam maxime itaque dignissimos. Earum dolore fuga porro. Sunt animi repellendus quas? Quaerat, perspiciatis optio. Voluptatem minus voluptas nihil in distinctio saepe nisi laborum natus, tempore provident hic consectetur.</p>
-        </article>
-        <article>
-            <h2>Quasi voluptas delectus quisquam.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Consectetur, assumenda iste sit ullam ipsa numquam excepturi natus. Commodi repudiandae consectetur quaerat error doloremque fugiat reprehenderit soluta, beatae expedita iusto unde minus, nam odit nemo provident, ducimus autem iure.</p>
-        </article>
-        <article>
-            <h2>Quae expedita debitis provident.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Beatae, dolore eveniet praesentium fugiat enim voluptatum quod, cum eum molestiae impedit at vitae. Explicabo doloremque veniam ducimus corrupti. Laborum ab non omnis sapiente sequi, alias facere dolor eaque facilis!</p>
-        </article>
-        <article>
-            <h2>Odit id molestiae corporis?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Facere itaque nostrum in nobis, eius minima dicta, quae, nesciunt atque cumque voluptates exercitationem sint neque ipsa necessitatibus vitae. Optio nam quia et cupiditate aliquam error tenetur dolorem accusamus inventore.</p>
-        </article>
-        <article>
-            <h2>Repellat vitae modi ipsum.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Similique, sit quam? Voluptates repudiandae, eius tenetur architecto asperiores numquam, harum quidem quis commodi incidunt totam atque veniam. Tenetur adipisci dolorum excepturi perferendis officiis quidem esse? Possimus vitae totam voluptatibus!</p>
-        </article>
-          -->
-    </div>
+  <!-- The SVG where D3 will draw -->
+  <svg id="projects-plot" viewBox="-50 -50 100 100"></svg>
 
-    <h2>Note: This is an outdated resume</h2>
-    <img src="../images/Redacted_Christian_Kumagai_Resume.png" alt="Christian Kumagai Resume" style="max-width: 100%; height: auto;">
+  <ul class="legend"></ul>
 
+  <input
+    class="searchBar"
+    type="search"
+    aria-label="Search projects"
+    placeholder="🔍 Search projects…"
+  />
 
-    <script src="../global.js" type="module"></script>
-    <script src="projects.js" type="module"></script>
+  <!-- Project cards will be rendered here -->
+  <div class="projects"></div>
+
+  <h2>Note: This is an outdated resume</h2>
+  <img src="../images/Redacted_Christian_Kumagai_Resume.png"
+       alt="Christian Kumagai Resume"
+       style="max-width: 100%; height: auto;">
+
+  <script src="../global.js" type="module"></script>
+  <script src="projects.js" type="module"></script>
 </body>
 </html>
